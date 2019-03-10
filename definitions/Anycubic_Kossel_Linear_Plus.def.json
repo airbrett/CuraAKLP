@@ -1,0 +1,55 @@
+{
+    "name": "Anycubic Kossel Linear Plus",
+    "version": 2,
+    "inherits": "fdmprinter",
+    "metadata": {
+        "visible": true,
+        "author": "Airbrett",
+        "manufacturer": "Anycubic",
+        "file_formats": "text/x-gcode",
+        "platform_offset": [ 0, 0, 0],
+		"has_machine_quality": true,
+        "machine_extruder_trains":
+        {
+            "0": "Anycubic_Kossel_Linear_Plus_extruder_0"
+        }
+    },
+
+    "overrides": {
+        "speed_travel": { "default_value": 80 },
+        "speed_wall_x": { "default_value": 60 },
+        "speed_wall_0": { "default_value": 30 },
+        "speed_topbottom": { "default_value": 30 },
+        "layer_height": { "default_value": 0.2 },
+		"layer_height_0": {"default_value": 0.2},
+        "speed_print": { "default_value": 60 },
+        "speed_infill": { "default_value": 60 },
+		"speed_layer_0": {"default_value": 30},
+		"skirt_brim_speed": {"default_value": 30},
+        "machine_extruder_count": { "default_value": 1 },
+        "machine_heated_bed": { "default_value": true },
+        "machine_center_is_zero": { "default_value": true },
+        "machine_height": { "default_value": 300 },
+        "machine_gcode_flavor": { "default_value": "RepRap (Marlin/Sprinter)" },
+        "machine_depth": { "default_value": 230 },
+        "machine_width": { "default_value": 230 },
+        "machine_name": { "default_value": "Anycubic Kossel Linear Plus" },
+        "machine_shape": { "default_value": "elliptic"},
+		"retraction_enable": {"default_value": true},
+		"retraction_amount": {"default_value": 5},
+		"retraction_speed": {"default_value": 70},
+		"retraction_combing": {"default_value": "noskin"},
+		"adhesion_type": { "default_value": "skirt" },
+		"infill_before_walls": {"default_value": false},
+		"infill_overlap": {"default_value": 0},
+		"cool_min_layer_time": {"default_value": 15},
+		"support_z_distance": {"default_value": 0.4},
+		"machine_max_acceleration_x": {"default_value": 3000},
+		"machine_max_acceleration_y": {"default_value": 3000},
+		"machine_max_acceleration_z": {"default_value": 3000},
+		"machine_acceleration": {"default_value": 2000},
+		"machine_max_jerk_xy": {"default_value": 5},
+		"machine_max_jerk_z": {"default_value": 5},
+		"machine_max_jerk_e": {"default_value": 5}
+    }
+}
