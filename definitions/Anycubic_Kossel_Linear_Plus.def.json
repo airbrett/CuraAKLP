@@ -16,7 +16,6 @@
     },
 
     "overrides": {
-        "speed_wall_x": { "default_value": 30 },
         "speed_wall_0": { "default_value": 30 },
         "speed_topbottom": { "default_value": 30 },
         "layer_height": { "default_value": 0.2 },
