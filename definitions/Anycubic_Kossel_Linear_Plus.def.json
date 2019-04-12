@@ -36,7 +36,7 @@
 		"retraction_enable": {"default_value": true},
 		"retraction_amount": {"default_value": 5},
 		"retraction_speed": {"default_value": 70},
-		"retraction_combing": {"default_value": "noskin"},
+		"retraction_combing": {"default_value": "off"},
 		"adhesion_type": { "default_value": "skirt" },
 		"infill_before_walls": {"default_value": false},
 		"infill_overlap": {"default_value": 0},
