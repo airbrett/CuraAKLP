@@ -11,11 +11,13 @@
 		"has_machine_quality": true,
         "machine_extruder_trains":
         {
-            "0": "Anycubic_Kossel_Linear_Plus_extruder_0"
+            "0": "Anycubic_Kossel_Linear_Plus_extruder_0",
+			"1": "Anycubic_Kossel_Linear_Plus_extruder_1"
         }
     },
 
     "overrides": {
+		"adhesion_type": { "default_value": "skirt"},
 		"optimize_wall_printing_order": {"default_value":true},
         "speed_wall_0": { "default_value": 30},
         "speed_topbottom": { "default_value": 30},
@@ -26,7 +28,7 @@
 		"speed_layer_0": {"default_value": 30},
 		"speed_z_hop": {"default_value": 60},
 		"skirt_brim_speed": {"default_value": 30},
-        "machine_extruder_count": { "default_value": 1},
+        "machine_extruder_count": { "default_value": 2},
         "machine_heated_bed": { "default_value": true},
         "machine_center_is_zero": { "default_value": true},
         "machine_height": { "default_value": 300},
@@ -35,14 +37,17 @@
         "machine_width": { "default_value": 230},
         "machine_name": { "default_value": "Anycubic Kossel Linear Plus"},
         "machine_shape": { "default_value": "elliptic"},
+		"machine_nozzle_heat_up_speed": { "default_value": 0.9 },
+		"machine_nozzle_cool_down_speed": {"default_value": 1.0},
+		"switch_extruder_retraction_speeds": {"default_value": 70},
 		"retraction_enable": {"default_value": true},
-		"retraction_amount": {"default_value": 5},
+		"retraction_amount": {"default_value": 2},
 		"retraction_speed": {"default_value": 70},
 		"retraction_combing": {"default_value": "off"},
-		"adhesion_type": { "default_value": "skirt"},
 		"retraction_hop_only_when_collides": {"default_value": true},
 		"retraction_hop": {"default_value": 0.1},
 		"cool_min_layer_time": {"default_value": 15},
+		"skirt_line_count": {"default_value": 3},
 		"support_z_distance": {"default_value": 0.4},
 		"support_brim_enable": {"default_value": true},
 		"support_brim_width": {"default_value": 4.0},
@@ -57,10 +62,14 @@
 		"machine_max_jerk_z": {"default_value": 5},
 		"machine_max_jerk_e": {"default_value": 5},
 		"machine_start_gcode": {
-			"default_value": "M104 S{material_print_temperature_layer_0} ; set extruder temp\nM140 S{material_bed_temperature_layer_0} ; set bed temp\nM190 S{material_bed_temperature_layer_0} ; wait for bed temp\nM109 S{material_print_temperature_layer_0} ; wait for extruder temp\nG28 ;Home\nG1 Z15.0 F6000 ;Move the platform down 15mm\nG92 E0\n;Prime the extruder\nG1 X-47.3332 Y-101.506 Z0.5 F4000 ; go outside print area\n;priming arc 1\nG1 X-45.5545 Y-102.317 E0.5 F1000\nG1 X-43.7619 Y-103.097 E1\nG1 X-41.956 Y-103.845 E1.5\nG1 X-40.1372 Y-104.561 E2\nG1 X-38.3062 Y-105.246 E2.5\nG1 X-36.4636 Y-105.898 E3\nG1 X-34.6099 Y-106.518 E3.5\nG1 X-32.7457 Y-107.106 E4\nG1 X-30.8714 Y-107.661 E4.5\nG1 X-28.9877 Y-108.184 E5\nG1 X-27.0953 Y-108.673 E5.5\nG1 X-25.1945 Y-109.129 E6\nG1 X-23.2861 Y-109.553 E6.5\nG1 X-21.3706 Y-109.942 E7\nG1 X-19.4486 Y-110.298 E7.5\nG1 X-17.5207 Y-110.621 E8\nG1 X-15.5874 Y-110.91 E8.5\nG1 X-13.6494 Y-111.165 E9\nG1 X-11.7072 Y-111.386 E9.5\nG1 X-9.76144 Y-111.574 E10\nG1 X-7.81273 Y-111.727 E10.5\nG1 X-5.86165 Y-111.847 E11\nG1 X-3.90877 Y-111.932 E11.5\nG1 X-1.95466 Y-111.983 E12\nG1 X1.33559e-06 Y-112 E12.5\nG1 X1.95466 Y-111.983 E13\nG1 X3.90872 Y-111.932 E13.5\nG1 X5.86165 Y-111.847 E14\nG1 X7.81274 Y-111.727 E14.5\nG1 X9.76144 Y-111.574 E15\n;priming arc 2\nG1 X11.7072 Y-111.386 E15.625\nG1 X13.6493 Y-111.165 E16.25\nG1 X15.5874 Y-110.91 E16.875\nG1 X17.5207 Y-110.621 E17.5\nG1 X19.4486 Y-110.298 E18.125\nG1 X21.3706 Y-109.942 E18.75\nG1 X23.2861 Y-109.553 E19.375\nG1 X25.1945 Y-109.129 E20\nG1 X27.0953 Y-108.673 E20.625\nG1 X28.9877 Y-108.184 E21.25\nG1 X30.8714 Y-107.661 E21.875\nG1 X32.7456 Y-107.106 E22.5\nG1 X34.6099 Y-106.518 E23.125\nG1 X36.4636 Y-105.898 E23.75\nG1 X38.3063 Y-105.246 E24.375\nG1 X40.1372 Y-104.561 E25\nG1 X41.9559 Y-103.845 E25.625\nG1 X43.7619 Y-103.097 E26.25\nG1 X45.5545 Y-102.317 E26.875\nG1 X47.3332 Y-101.506 E27.5"
+			"default_value": "M104 S{material_print_temperature_layer_0} ; set extruder temp\nM140 S{material_bed_temperature_layer_0} ; set bed temp\nM190 S{material_bed_temperature_layer_0} ; wait for bed temp\nM109 S{material_print_temperature_layer_0} ; wait for extruder temp\nG28 ;Home\nM420 S1 ;restore bed leveling state\nG1 Z15.0 F6000 ;Move the platform down 15mm\nG92 E0\nG92 E1"
 		},
 		"machine_end_gcode": {
-			"default_value": "M104 S0\nM140 S0\n;Retract the filament\nG92 E{retraction_amount}\nG1 E-{retraction_amount} F300\nG28 X0 Y0\nM84"
-		}
+			"default_value": "M104 S0\nM140 S0\nG28 X0 Y0\nM84"
+		},
+		"prime_tower_enable": {"default_value": true},
+		"prime_tower_position_x": {"value": 100},
+		"prime_tower_position_y": {"value": 0},
+		"ooze_shield_enabled": {"default_value": true}
     }
 }
