@@ -68,8 +68,6 @@
 		"support_type": { "default_value": "buildplate"},
 		"top_layers": { "default_value": 0},
 		"wall_0_wipe_dist": { "default_value": 0.0},
-		"z_seam_corner": { "default_value": "z_seam_corner_outer"},
-		"z_seam_type": { "default_value": "back"},
 		"machine_start_gcode": {
 			"default_value": ";wait for bed temperature\nM116\n\n;nozzle temperatures\nG10 P0 R200 S200\nG10 P1 R200 S200\nM116\nG28 ;Home\nG29 S1 ;Load mesh\n\nG1 X0 Y-115 Z15 F6000 ;move down fast\nG0 Z0.2 F1000 ;move lower slow\nG3 X57.3 Y-99.7 I0 J115 E9 F1000 ;prime 1\nG3 X87.86 Y-74.2 I-57.3 J99.7 E12 F1000 ;prime 2\n"
 		},
