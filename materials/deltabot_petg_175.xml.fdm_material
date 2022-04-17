@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fdmmaterial xmlns="http://www.ultimaker.com/material" version="1.3">
+    <metadata>
+        <name>
+            <brand>Deltabot</brand>
+            <material>PETG</material>
+            <color>Generic</color>
+        </name>
+        <GUID>c71d3bcd-8569-4bac-a1a6-f6795e143035</GUID>
+        <version>3</version>
+        <color_code>#f3a112</color_code>
+        <description>It's PETG yo</description>
+    </metadata>
+    <properties>
+        <density>1.27</density>
+        <diameter>1.75</diameter>
+    </properties>
+    <settings>
+        <setting key="print temperature">230</setting>
+        <setting key="heated bed temperature">60</setting>
+		<setting key="surface energy">3.2</setting>
+    </settings>
+</fdmmaterial>
