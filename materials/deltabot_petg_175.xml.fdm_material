@@ -18,6 +18,7 @@
     <settings>
         <setting key="print temperature">230</setting>
         <setting key="heated bed temperature">60</setting>
+		<setting key="print cooling">30</setting>
 		<setting key="surface energy">3.2</setting>
     </settings>
 </fdmmaterial>
