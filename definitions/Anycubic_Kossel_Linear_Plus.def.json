@@ -31,7 +31,7 @@
 		"machine_always_write_active_tool": { "default_value": true},
 		"machine_nozzle_temp_enabled": { "default_value": false},
 		"machine_start_gcode": {
-			"default_value": ";wait for bed temperature\nM116\n\n;nozzle temperatures\nG10 P0 R200 S200\nG10 P1 R200 S200\nM116\nG28 ;Home\nG29 S1 ;Load mesh\n\nG1 X0 Y-115 Z15 F6000 ;move down fast\nG0 Z0.2 F1000 ;move lower slow\nG3 X57.3 Y-99.7 I0 J115 E9 F1000 ;prime 1\nG3 X87.86 Y-74.2 I-57.3 J99.7 E12 F1000 ;prime 2\n"
+			"default_value": ";wait for bed temperature\nM116\n\n;nozzle temperatures\nG10 P0 R{material_print_temperature} S{material_print_temperature}\nG10 P1 R{material_print_temperature} S{material_print_temperature}\nM116\nG28 ;Home\nG29 S1 ;Load mesh\n\nG1 X0 Y-115 Z15 F6000 ;move down fast\nG0 Z0.2 F1000 ;move lower slow\nG3 X57.3 Y-99.7 I0 J115 E9 F1000 ;prime 1\nG3 X87.86 Y-74.2 I-57.3 J99.7 E12 F1000 ;prime 2\n"
 		},
 		"machine_end_gcode": {
 			"default_value": "G28 ;home\n\nG11 ;unretract\n\nT0\n\n;turn off all heaters\nG10 P0 R-273.15 S-273.15\nG10 P1 R-273.15 S-273.15\nM140 S-273.15\n\nM84 ;disable motors"
